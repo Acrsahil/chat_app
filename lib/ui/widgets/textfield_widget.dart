@@ -1,4 +1,5 @@
 import 'package:chat_app/core/constants/colors.dart';
+import 'package:chat_app/core/constants/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -23,6 +24,7 @@ class CustomTextfield extends StatelessWidget {
         filled: true,
         fillColor: grey.withOpacity(0.2),
         hintText: hintText,
+        hintStyle: body.copyWith(color: grey),
         border: OutlineInputBorder(
           borderRadius: BorderRadius.circular(10.r),
           borderSide: BorderSide.none,

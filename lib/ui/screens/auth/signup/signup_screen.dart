@@ -1,4 +1,5 @@
 import 'package:chat_app/core/constants/colors.dart';
+import 'package:chat_app/core/constants/string.dart';
 import 'package:chat_app/core/constants/styles.dart';
 import 'package:chat_app/ui/widgets/textfield_widget.dart';
 import 'package:flutter/material.dart';
@@ -18,9 +19,11 @@ class SignupScreen extends StatelessWidget {
             40.verticalSpace,
             Text("Create Your Account", style: h),
             5.verticalSpace,
-            const SizedBox(height: 10),
-            const Text("Please provide the details"),
-            24.verticalSpace,
+            Text(
+              "Please provide the details",
+              style: body.copyWith(color: grey),
+            ),
+            30.verticalSpace,
             CustomTextfield(hintText: "Enter Name:", onChanged: (p0) {}),
             20.verticalSpace,
             CustomTextfield(hintText: "Enter Email:", onChanged: (p0) {}),
@@ -30,6 +33,28 @@ class SignupScreen extends StatelessWidget {
             CustomTextfield(hintText: "Confirm Password:", onChanged: (p0) {}),
             30.verticalSpace,
             CustomButton(onPressed: () {}, text: "Sign Up"),
+            20.verticalSpace,
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Already have an account? ",
+                  style: body.copyWith(color: grey),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, login); // Navigate to login
+                  },
+                  child: Text(
+                    "Login",
+                    style: body.copyWith(
+                      fontWeight: FontWeight.bold,
+                      color: primary,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),

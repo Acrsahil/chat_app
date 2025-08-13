@@ -6,23 +6,23 @@ import 'package:flutter/material.dart';
 import 'package:chat_app/ui/screens/home/home_screen.dart';
 
 class RouteUtils {
-    static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
-        switch (settings.name) {
-            case splash:
-                return MaterialPageRoute(builder: (context) => SplashScreen());
-            //Auth
-            case signup:
-                return MaterialPageRoute(builder: (context) => SignupScreen());
-            case login:
-                return MaterialPageRoute(builder: (context) => LoginScreen());
-            //Home
-            case home:
-                return MaterialPageRoute(builder: (context) => HomeScreen());
-            default:
-                MaterialPageRoute(
-                    builder: (context) => Scaffold(body: Center(child: Text("No Route Found")),
-                    )
-                );
-        }
+  static Route<dynamic>? onGenerateRoute(RouteSettings settings) {
+    switch (settings.name) {
+      case splash:
+        return MaterialPageRoute(builder: (context) => SplashScreen());
+      //Auth
+      case signup:
+        return MaterialPageRoute(builder: (context) => SignupScreen());
+      case login:
+        return MaterialPageRoute(builder: (context) => LoginScreen());
+      //Home
+      case home:
+        return MaterialPageRoute(builder: (context) => HomeScreen());
+      default:
+        MaterialPageRoute(
+          builder: (context) =>
+              Scaffold(body: Center(child: Text("No Route Found"))),
+        );
     }
+  }
 }
